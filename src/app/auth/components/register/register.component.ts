@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { FormBuilder, Validators, ReactiveFormsModule } from "@angular/forms";
-import { register } from "../../store/action";
+import { authActions } from "../../store/action";
 import { Store } from "@ngrx/store";
 import { RegisterRequestInterface } from "../../types/registerRequest.interface";
 import { RouterLink } from "@angular/router";
@@ -32,6 +32,6 @@ export class RegisterComponent {
         let request: RegisterRequestInterface = {
             user: this.form.getRawValue()
         }
-        this.store.dispatch(register({request}))
+        this.store.dispatch(authActions.register({request}))
     }
 }
