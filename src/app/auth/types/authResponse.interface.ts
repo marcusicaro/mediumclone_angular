@@ -1,4 +1,4 @@
-import { CurrentUserInterface } from "src/app/shared/currentUser.interface";
+import { CurrentUserInterface } from "src/app/shared/types/currentUser.interface";
 
 export interface AuthResponseInterface {
     user: CurrentUserInterface
